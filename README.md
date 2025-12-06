@@ -30,20 +30,33 @@ rl-recommender-system/
 ### (2) 런타임 설정 
 - 런타임 → 런타임 유형 변경 → GPU 선택(선택 사항) 
 ### (3) 필요한 라이브러리 설치 
-```bash 
-!pip install numpy pandas scikit-learn torch 
+``` 
+!pip install numpy pandas scikit-learn torch
 ```
-### (4) Google Drive 마운트 및 데이터 불러오기 
+
+### (4) 데이터 다운로드 안내
+
+본 프로젝트는 **COIL2000 데이터셋**을 사용합니다.  
+데이터는 저작권 및 재배포 제한으로 인해 GitHub 저장소에 포함되어 있지 않습니다.
+
+데이터 다운로드 링크  
+아래 공식 사이트에서 직접 다운로드해야 합니다.
+- COIL2000 Dataset:  
+  https://kdd.ics.uci.edu/databases/tic/tic.html
+
+다운로드 후, Google Drive에 업로드하여 Colab에서 불러오는 방식으로 사용합니다.
+
+### (5) Google Drive 마운트 및 데이터 불러오기 
 COIL2000 데이터는 Google Drive에 저장되어 있으며, Colab에서 아래와 같이 Drive를 마운트하여 불러온다. 
 ```
 from google.colab 
 import drive drive.mount('/content/drive') 
 ```
-예시 데이터 경로 
+예시) 데이터 경로 
 ```
 base_path = './gdrive/MyDrive/Colab Notebooks/COIL2000/data.csv'
 ```
-### (5) 셀을 순서대로 실행 데이터 로딩 → 환경 구성 → 모델 학습 → 평가 순으로 진행된다. 
+### (6) 셀을 순서대로 실행 데이터 로딩 → 환경 구성 → 모델 학습 → 평가 순으로 진행된다. 
 
 ## 5. 구현 알고리즘
 ```
