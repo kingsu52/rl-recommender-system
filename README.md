@@ -21,7 +21,7 @@ DQN, Double DQN, CQL 알고리즘을 적용하여 추천 정책의 성능을 비
 rl-recommender-system/
  ├── main.ipynb                # 환경 구성, 학습, 평가가 포함된 전체 코드
  ├── presentation/             # 발표 자료(PPT)
- │    └── final_presentation.pptx
+ │    └── rl_recommender_presentation.pptx
  └── README.md
 ```
 
@@ -30,13 +30,15 @@ rl-recommender-system/
 ### (2) 런타임 설정 
 - 런타임 → 런타임 유형 변경 → GPU 선택(선택 사항) 
 ### (3) 필요한 라이브러리 설치 
-```bash !pip install numpy pandas scikit-learn torch ```
-
+```bash 
+!pip install numpy pandas scikit-learn torch 
+```
 ### (4) Google Drive 마운트 및 데이터 불러오기 
 COIL2000 데이터는 Google Drive에 저장되어 있으며, Colab에서 아래와 같이 Drive를 마운트하여 불러온다. 
+```
 from google.colab 
 import drive drive.mount('/content/drive') 
-
+```
 예시 데이터 경로 
 ```
 base_path = './gdrive/MyDrive/Colab Notebooks/COIL2000/data.csv'
